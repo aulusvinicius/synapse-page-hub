@@ -19,10 +19,10 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="text-foreground">Disrupção</span>
+            <span className="text-foreground">Sua disrupção</span>
             <br />
             <span className="bg-tech-gradient bg-clip-text text-transparent">
-              Tecnológica
+              Tecnológica passa por aqui.
             </span>
           </h1>
           

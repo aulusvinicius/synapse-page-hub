@@ -2,39 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Neo.Flow Design System - Modern Tech Landing Page 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neo.Flow Brand Colors */
+    --primary: 340 82% 62%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 250 50% 35%;
+    --secondary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 340 82% 62%;
+
+    /* Custom Design Tokens */
+    --neo-blue: 250 50% 35%;
+    --neo-pink: 340 82% 62%;
+    --tech-gradient: linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink)));
+    --glow-gradient: linear-gradient(90deg, hsl(var(--neo-pink) / 0.3), hsl(var(--neo-blue) / 0.3));
+    --surface-gradient: linear-gradient(145deg, hsl(240 10% 3.9%), hsl(240 7% 8%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--neo-pink) / 0.3);
+    --shadow-tech: 0 10px 30px -10px hsl(var(--neo-blue) / 0.4);
+    --shadow-elevated: 0 20px 50px -15px hsl(240 10% 1% / 0.6);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 

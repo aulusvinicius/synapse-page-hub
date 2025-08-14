@@ -18,11 +18,15 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-tech-gradient text-white shadow-glow hover:shadow-tech transform hover:scale-105 transition-all duration-300 border border-neo-pink/20",
+        tech: "bg-surface-gradient text-foreground border border-neo-blue/30 hover:border-neo-pink/50 shadow-tech hover:shadow-glow transition-all duration-300",
+        glow: "bg-neo-pink/10 text-neo-pink border border-neo-pink/30 hover:bg-neo-pink/20 hover:shadow-glow transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-12 rounded-lg px-10 text-base",
         icon: "h-10 w-10",
       },
     },

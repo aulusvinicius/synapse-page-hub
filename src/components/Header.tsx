@@ -9,7 +9,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/bfc1ddf7-1734-418d-a3ea-191f57997fdc.png" 
               alt="neoflow" 
-              className="h-20 w-auto"
+              className="h-14 w-auto"
             />
           </div>
           

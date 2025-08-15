@@ -7,8 +7,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/8b3ee719-8c36-41d7-90a8-2adbbe33fc7c.png" 
-              alt="neo.flow" 
+              src="/lovable-uploads/bfc1ddf7-1734-418d-a3ea-191f57997fdc.png" 
+              alt="neoflow" 
               className="h-20 w-auto"
             />
           </div>

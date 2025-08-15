@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, MessageSquare, Users, FileText, Zap, Shield } from "lucide-react";
+import { Cloud, MessageSquare, Users, FileText, Zap, Shield, BarChart3, Bot } from "lucide-react";
 import virtualizationIcon from "@/assets/virtualization-icon.jpg";
 import omnichannelIcon from "@/assets/omnichannel-icon.jpg";
 import crmIcon from "@/assets/crm-icon.jpg";
@@ -11,7 +11,7 @@ const Services = () => {
       icon: Cloud,
       image: virtualizationIcon,
       title: "Virtualização de Infraestrutura",
-      description: "Soluções completas em virtualização para otimizar recursos e reduzir custos operacionais.",
+      description: "Soluções completas em virtualização tecnológica para otimizar recursos e reduzir custos operacionais.",
       features: ["Cloud Computing", "Servidores Virtuais", "Backup Automatizado", "Monitoramento 24/7"]
     },
     {
@@ -24,16 +24,30 @@ const Services = () => {
     {
       icon: Users,
       image: crmIcon,
-      title: "CRM Avançado",
+      title: "CRM Inteligente",
       description: "Gerencie relacionamentos com clientes de forma eficiente com nossa solução CRM completa.",
       features: ["Automação de Vendas", "Analytics Avançados", "Funil de Conversão", "Relatórios Personalizados"]
     },
     {
       icon: FileText,
       image: documentsIcon,
-      title: "Gestão de Documentos",
+      title: "Gerenciador de Documentos",
       description: "Sistema inteligente para organização, armazenamento e controle de documentos digitais.",
       features: ["Assinatura Digital", "Controle de Versão", "Busca Inteligente", "Compliance LGPD"]
+    },
+    {
+      icon: BarChart3,
+      image: virtualizationIcon,
+      title: "Painéis Gerenciais",
+      description: "Dashboards inteligentes com análises em tempo real para tomada de decisões estratégicas.",
+      features: ["KPIs em Tempo Real", "Relatórios Customizados", "Análise Preditiva", "Business Intelligence"]
+    },
+    {
+      icon: Bot,
+      image: omnichannelIcon,
+      title: "Automações Inteligentes",
+      description: "Soluções de automação para otimizar processos e aumentar a produtividade da sua empresa.",
+      features: ["Workflows Personalizados", "Integrações API", "RPA Avançado", "IA Aplicada"]
     }
   ];
 
@@ -50,11 +64,11 @@ const Services = () => {
             <span className="bg-tech-gradient bg-clip-text text-transparent"> Tecnológicas</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Oferecemos um ecossistema completo de soluções para transformar sua empresa digitalmente
+            A neoflow oferece um ecossistema completo de soluções para transformar sua empresa digitalmente
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -98,12 +112,12 @@ const Services = () => {
           <div className="text-center p-6 rounded-lg bg-card/30 backdrop-blur-sm border border-border">
             <Zap className="h-12 w-12 text-neo-pink mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-foreground mb-2">Alto Performance</h3>
-            <p className="text-muted-foreground text-sm">Sistemas otimizados para máxima eficiência operacional</p>
+            <p className="text-muted-foreground text-sm">Sistemas neoflow otimizados para máxima eficiência operacional</p>
           </div>
           <div className="text-center p-6 rounded-lg bg-card/30 backdrop-blur-sm border border-border">
             <Users className="h-12 w-12 text-neo-blue mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-foreground mb-2">Suporte 24/7</h3>
-            <p className="text-muted-foreground text-sm">Equipe especializada disponível a qualquer momento</p>
+            <p className="text-muted-foreground text-sm">Equipe neoflow especializada disponível a qualquer momento</p>
           </div>
         </div>
       </div>

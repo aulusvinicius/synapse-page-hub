@@ -1,50 +1,40 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cloud, MessageSquare, Users, FileText, Zap, Shield, BarChart3, Bot } from "lucide-react";
-import virtualizationIcon from "@/assets/virtualization-icon.jpg";
-import omnichannelIcon from "@/assets/omnichannel-icon.jpg";
-import crmIcon from "@/assets/crm-icon.jpg";
-import documentsIcon from "@/assets/documents-icon.jpg";
 
 const Services = () => {
   const services = [
     {
       icon: Cloud,
-      image: virtualizationIcon,
       title: "Virtualização de Infraestrutura",
       description: "Soluções completas em virtualização tecnológica para otimizar recursos e reduzir custos operacionais.",
       features: ["Cloud Computing", "Servidores Virtuais", "Backup Automatizado", "Monitoramento 24/7"]
     },
     {
       icon: MessageSquare,
-      image: omnichannelIcon,
       title: "Comunicação Omnichannel",
       description: "Unifique todos os canais de comunicação em uma plataforma integrada e inteligente.",
       features: ["WhatsApp Business", "Chat Web", "E-mail Marketing", "Central Telefônica"]
     },
     {
       icon: Users,
-      image: crmIcon,
       title: "CRM Inteligente",
       description: "Gerencie relacionamentos com clientes de forma eficiente com nossa solução CRM completa.",
       features: ["Automação de Vendas", "Analytics Avançados", "Funil de Conversão", "Relatórios Personalizados"]
     },
     {
       icon: FileText,
-      image: documentsIcon,
       title: "Gerenciador de Documentos",
       description: "Sistema inteligente para organização, armazenamento e controle de documentos digitais.",
       features: ["Assinatura Digital", "Controle de Versão", "Busca Inteligente", "Compliance LGPD"]
     },
     {
       icon: BarChart3,
-      image: virtualizationIcon,
       title: "Painéis Gerenciais",
       description: "Dashboards inteligentes com análises em tempo real para tomada de decisões estratégicas.",
       features: ["KPIs em Tempo Real", "Relatórios Customizados", "Análise Preditiva", "Business Intelligence"]
     },
     {
       icon: Bot,
-      image: omnichannelIcon,
       title: "Automações Inteligentes",
       description: "Soluções de automação para otimizar processos e aumentar a produtividade da sua empresa.",
       features: ["Workflows Personalizados", "Integrações API", "RPA Avançado", "IA Aplicada"]
@@ -75,12 +65,8 @@ const Services = () => {
               className="bg-card/50 backdrop-blur-sm border-border hover:border-neo-pink/50 transition-all duration-300 hover:shadow-glow group"
             >
               <CardHeader>
-                <div className="flex items-center mb-4">
-                  <div 
-                    className="w-16 h-16 rounded-lg bg-cover bg-center mr-4 border border-neo-blue/30"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  />
-                  <service.icon className="h-8 w-8 text-neo-pink group-hover:animate-glow" />
+                <div className="flex items-center justify-center mb-4">
+                  <service.icon className="h-12 w-12 text-neo-pink group-hover:animate-glow" />
                 </div>
                 <CardTitle className="text-xl text-foreground group-hover:text-neo-pink transition-colors">
                   {service.title}

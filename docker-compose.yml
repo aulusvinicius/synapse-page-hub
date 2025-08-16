@@ -2,25 +2,21 @@ version: "3.8"
 
 services:
   neoflow-web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: neoflow-web
-    restart: unless-stopped
+    image: your-registry/neoflow-web:latest  # Substitua pela sua imagem
     networks:
       - network_swarm_public
     labels:
       # Traefik configuration
       - "traefik.enable=true"
-      - "traefik.docker.network=traefik"
+      - "traefik.docker.network=network_swarm_public"
 
       # HTTP redirect to HTTPS
-      - "traefik.http.routers.neoflow-web-http.rule=Host(⁠ www.neoflow.com.br ⁠)"
+      - "traefik.http.routers.neoflow-web-http.rule=Host(`www.neoflow.com.br`)"
       - "traefik.http.routers.neoflow-web-http.entrypoints=web"
       - "traefik.http.routers.neoflow-web-http.middlewares=redirect-to-https"
 
       # HTTPS configuration
-      - "traefik.http.routers.neoflow-web-https.rule=Host(⁠ www.neoflow.com.br ⁠)"
+      - "traefik.http.routers.neoflow-web-https.rule=Host(`www.neoflow.com.br`)"
       - "traefik.http.routers.neoflow-web-https.entrypoints=websecure"
       - "traefik.http.routers.neoflow-web-https.tls=true"
       - "traefik.http.routers.neoflow-web-https.tls.certresolver=myresolver"

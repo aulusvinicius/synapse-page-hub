@@ -85,8 +85,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Soluções completas em virtualização, comunicação omnichannel, CRM e gestão documental 
-            para impulsionar sua empresa ao futuro digital.
+            Soluções completas em virtualização, automação, comunicação omnichannel, CRM e gestão de documentos 
+            para impulsionar sua empresa rumo ao futuro digital.
           </p>
           
           <div className="flex justify-center">

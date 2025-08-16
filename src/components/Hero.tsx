@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Cpu, Brain, Code, Database, Server, Wifi, Cloud, Bot, Microchip, Network } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -91,12 +90,19 @@ const Hero = () => {
           </p>
           
           <div className="flex justify-center">
-            <Link to="/produtos">
-              <Button variant="hero" size="xl" className="group">
-                Conhecer Soluções
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="group"
+              onClick={() => {
+                document.getElementById('services')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+            >
+              Conhecer Soluções
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </div>

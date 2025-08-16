@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, Cpu, Brain, Code, Database, Server, Wifi, Cloud, Bot, Microchip, Network } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -19,15 +19,17 @@ const Hero = () => {
                 animationDuration: `${15 + Math.random() * 10}s`
               }}
             >
-              {/* Tech icons representing different services */}
-              {i % 8 === 0 && <Zap className="h-4 w-4 text-neo-pink/40" />}
-              {i % 8 === 1 && <div className="w-3 h-3 border border-neo-pink/40 rounded-sm rotate-45" />}
-              {i % 8 === 2 && <div className="w-2 h-2 bg-neo-pink/40 rounded-full" />}
-              {i % 8 === 3 && <div className="w-4 h-1 bg-gradient-to-r from-neo-pink/40 to-transparent" />}
-              {i % 8 === 4 && <div className="w-3 h-3 border-2 border-neo-pink/40 rounded-full" />}
-              {i % 8 === 5 && <div className="w-1 h-4 bg-neo-pink/40" />}
-              {i % 8 === 6 && <div className="flex space-x-1"><div className="w-1 h-1 bg-neo-pink/40"></div><div className="w-1 h-1 bg-neo-pink/40"></div><div className="w-1 h-1 bg-neo-pink/40"></div></div>}
-              {i % 8 === 7 && <div className="w-3 h-3 border-l-2 border-t-2 border-neo-pink/40 rotate-45" />}
+              {/* Tech and AI icons representing different services */}
+              {i % 10 === 0 && <Cpu className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 1 && <Brain className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 2 && <Code className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 3 && <Database className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 4 && <Server className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 5 && <Wifi className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 6 && <Cloud className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 7 && <Bot className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 8 && <Microchip className="h-4 w-4 text-neo-pink/40" />}
+              {i % 10 === 9 && <Network className="h-4 w-4 text-neo-pink/40" />}
             </div>
           ))}
         </div>

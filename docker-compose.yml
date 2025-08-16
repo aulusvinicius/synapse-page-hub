@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   neoflow-web:
-    image: your-registry/neoflow-web:latest  # Use imagem pré-construída para Swarm
+    image: nginx:alpine  # Imagem simples para teste
     networks:
       - network_swarm_public
     deploy:
@@ -11,35 +11,11 @@ services:
         condition: on-failure
         delay: 5s
         max_attempts: 3
-      resources:
-        limits:
-          memory: 512M
-          cpus: '0.5'
-        reservations:
-          memory: 256M
-          cpus: '0.25'
       labels:
-        # Traefik configuration
         - "traefik.enable=true"
         - "traefik.docker.network=network_swarm_public"
-
-        # HTTP redirect to HTTPS
-        - "traefik.http.routers.neoflow-web-http.rule=Host(`www.neoflow.com.br`)"
-        - "traefik.http.routers.neoflow-web-http.entrypoints=web"
-        - "traefik.http.routers.neoflow-web-http.middlewares=redirect-to-https"
-
-        # HTTPS configuration
-        - "traefik.http.routers.neoflow-web-https.rule=Host(`www.neoflow.com.br`)"
-        - "traefik.http.routers.neoflow-web-https.entrypoints=websecure"
-        - "traefik.http.routers.neoflow-web-https.tls=true"
-        - "traefik.http.routers.neoflow-web-https.tls.certresolver=myresolver"
-
-        # Service configuration
+        - "traefik.http.routers.neoflow-web.rule=Host(`www.neoflow.com.br`)"
         - "traefik.http.services.neoflow-web.loadbalancer.server.port=80"
-
-        # Redirect middleware
-        - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-        - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
 
 networks:
   network_swarm_public:

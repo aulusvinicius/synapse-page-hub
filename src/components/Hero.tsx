@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Cpu, Brain, Code, Database, Server, Wifi, Cloud, Bot, Microchip, Network } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -89,14 +90,13 @@ const Hero = () => {
             para impulsionar sua empresa ao futuro digital.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="group">
-              Conhecer Soluções
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="tech" size="xl">
-              Falar com Especialista
-            </Button>
+          <div className="flex justify-center">
+            <Link to="/produtos">
+              <Button variant="hero" size="xl" className="group">
+                Conhecer Soluções
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

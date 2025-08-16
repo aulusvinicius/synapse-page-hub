@@ -1,15 +1,51 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
-import heroBg from "@/assets/ai-tech-hero.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      <div className="absolute inset-0 bg-background/60" />
+      {/* Dynamic disruption background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background">
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neo-pink/20 to-transparent animate-pulse" />
+          <div className="grid grid-cols-12 h-full">
+            {Array.from({ length: 144 }).map((_, i) => (
+              <div
+                key={i}
+                className={`border border-neo-pink/10 animate-pulse`}
+                style={{
+                  animationDelay: `${(i % 12) * 0.1}s`,
+                  animationDuration: `${2 + (i % 3)}s`
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        
+        {/* Floating particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-neo-pink/30 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 4}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Disruption waves */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" />
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-tech-gradient to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">

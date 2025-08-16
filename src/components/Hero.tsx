@@ -4,46 +4,66 @@ import { ArrowRight, Zap } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Dynamic disruption background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background">
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neo-pink/20 to-transparent animate-pulse" />
-          <div className="grid grid-cols-12 h-full">
-            {Array.from({ length: 144 }).map((_, i) => (
+      {/* Dynamic flowing tech background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background overflow-hidden">
+        {/* Flowing tech particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 50 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute opacity-30 animate-flow"
+              style={{
+                left: `${-10 + Math.random() * 120}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${15 + Math.random() * 10}s`
+              }}
+            >
+              {/* Tech icons representing different services */}
+              {i % 8 === 0 && <Zap className="h-4 w-4 text-neo-pink/40" />}
+              {i % 8 === 1 && <div className="w-3 h-3 border border-neo-pink/40 rounded-sm rotate-45" />}
+              {i % 8 === 2 && <div className="w-2 h-2 bg-neo-pink/40 rounded-full" />}
+              {i % 8 === 3 && <div className="w-4 h-1 bg-gradient-to-r from-neo-pink/40 to-transparent" />}
+              {i % 8 === 4 && <div className="w-3 h-3 border-2 border-neo-pink/40 rounded-full" />}
+              {i % 8 === 5 && <div className="w-1 h-4 bg-neo-pink/40" />}
+              {i % 8 === 6 && <div className="flex space-x-1"><div className="w-1 h-1 bg-neo-pink/40"></div><div className="w-1 h-1 bg-neo-pink/40"></div><div className="w-1 h-1 bg-neo-pink/40"></div></div>}
+              {i % 8 === 7 && <div className="w-3 h-3 border-l-2 border-t-2 border-neo-pink/40 rotate-45" />}
+            </div>
+          ))}
+        </div>
+
+        {/* Continuous flowing lines */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink/30 to-transparent animate-flow-horizontal" />
+          <div className="absolute top-2/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink/20 to-transparent animate-flow-horizontal" style={{ animationDelay: '3s' }} />
+          <div className="absolute top-3/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink/30 to-transparent animate-flow-horizontal" style={{ animationDelay: '6s' }} />
+          <div className="absolute top-4/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink/20 to-transparent animate-flow-horizontal" style={{ animationDelay: '9s' }} />
+          <div className="absolute top-5/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink/30 to-transparent animate-flow-horizontal" style={{ animationDelay: '12s' }} />
+        </div>
+
+        {/* Vertical flowing elements */}
+        <div className="absolute inset-0">
+          <div className="absolute left-1/12 top-0 h-full w-px bg-gradient-to-b from-transparent via-neo-pink/20 to-transparent animate-flow-vertical" />
+          <div className="absolute left-3/12 top-0 h-full w-px bg-gradient-to-b from-transparent via-neo-pink/15 to-transparent animate-flow-vertical" style={{ animationDelay: '4s' }} />
+          <div className="absolute left-5/12 top-0 h-full w-px bg-gradient-to-b from-transparent via-neo-pink/20 to-transparent animate-flow-vertical" style={{ animationDelay: '8s' }} />
+          <div className="absolute left-7/12 top-0 h-full w-px bg-gradient-to-b from-transparent via-neo-pink/15 to-transparent animate-flow-vertical" style={{ animationDelay: '12s' }} />
+          <div className="absolute left-9/12 top-0 h-full w-px bg-gradient-to-b from-transparent via-neo-pink/20 to-transparent animate-flow-vertical" style={{ animationDelay: '16s' }} />
+        </div>
+
+        {/* Tech grid overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="grid grid-cols-16 grid-rows-12 h-full w-full">
+            {Array.from({ length: 192 }).map((_, i) => (
               <div
                 key={i}
-                className={`border border-neo-pink/10 animate-pulse`}
+                className="border border-neo-pink/20"
                 style={{
-                  animationDelay: `${(i % 12) * 0.1}s`,
-                  animationDuration: `${2 + (i % 3)}s`
+                  opacity: Math.random() > 0.7 ? 1 : 0,
+                  animationDelay: `${i * 0.05}s`
                 }}
               />
             ))}
           </div>
-        </div>
-        
-        {/* Floating particles */}
-        <div className="absolute inset-0">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-neo-pink/30 rounded-full animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`
-              }}
-            />
-          ))}
-        </div>
-        
-        {/* Disruption waves */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" />
-          <div className="absolute top-1/2 left-0 w-full h-px bg-tech-gradient opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
       </div>
       

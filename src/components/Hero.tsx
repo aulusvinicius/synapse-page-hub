@@ -42,7 +42,7 @@ const Hero = () => {
         {/* Disruption waves */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" />
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-tech-gradient to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-0 w-full h-px bg-tech-gradient opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neo-pink to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
       </div>

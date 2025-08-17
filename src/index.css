@@ -19,10 +19,10 @@ All colors MUST be HSL.
     --popover-foreground: 240 10% 3.9%;
 
     /* Neo.Flow Brand Colors - consistent across modes */
-    --primary: 250 50% 35%;
+    --primary: 335 80% 62%;
     --primary-foreground: 0 0% 98%;
     
-    --secondary: 250 50% 35%;
+    --secondary: 335 80% 62%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 4.8% 95.9%;
@@ -36,11 +36,11 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 250 50% 35%;
+    --ring: 335 80% 62%;
 
     /* Custom Design Tokens */
-    --neo-blue: 250 50% 35%;
-    --neo-purple: 250 50% 35%;
+    --neo-blue: 335 80% 62%;
+    --neo-purple: 335 80% 62%;
     --tech-gradient: linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-purple)));
     --glow-gradient: linear-gradient(90deg, hsl(var(--neo-purple) / 0.3), hsl(var(--neo-blue) / 0.3));
     --surface-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
@@ -78,10 +78,10 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 98%;
 
     /* Keep brand colors consistent */
-    --primary: 250 50% 35%;
+    --primary: 335 80% 62%;
     --primary-foreground: 0 0% 98%;
     
-    --secondary: 250 50% 35%;
+    --secondary: 335 80% 62%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 3.7% 15.9%;
@@ -95,7 +95,7 @@ All colors MUST be HSL.
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 250 50% 35%;
+    --ring: 335 80% 62%;
 
     /* Dark mode design tokens */
     --surface-gradient: linear-gradient(145deg, hsl(240 10% 3.9%), hsl(240 7% 8%));

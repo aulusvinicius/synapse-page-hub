@@ -82,7 +82,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         <div className="absolute top-0 z-[0] h-screen w-screen bg-purple-950/10 dark:bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         <section className="relative max-w-full mx-auto z-1">
           <RetroGrid {...gridOptions} />
-          <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
+          <div className="max-w-screen-xl z-10 mx-auto px-4 pt-32 pb-16 gap-12 md:px-8">
             <div className="space-y-5 max-w-3xl leading-0 lg:leading-5 mx-auto text-center">
               <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                 {subtitle.regular}

@@ -39,7 +39,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-5xl leading-tight bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] mb-4">
             Nossas Soluções Digitais
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

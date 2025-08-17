@@ -59,7 +59,7 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-500 dark:from-white dark:via-purple-200 dark:to-purple-400">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-200 to-pink-500 dark:from-white dark:via-pink-200 dark:to-pink-400">
               Sua empresa a um clique da disrupção digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -72,19 +72,19 @@ const ContactForm = () => {
               <h3 className="text-2xl font-semibold mb-6">Por que escolher a NeoFlow?</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Soluções personalizadas para cada necessidade empresarial</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Tecnologia de ponta com suporte especializado</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Implementação rápida e eficiente</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">ROI comprovado e resultados mensuráveis</p>
                 </div>
               </div>
@@ -151,10 +151,10 @@ const ContactForm = () => {
                   </div>
                   
                   <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] w-full">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFCFE1_0%,#FA5080_50%,#FFCFE1_100%)]" />
                     <Button
                       type="submit"
-                      className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-4 px-10"
+                      className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl bg-gradient-to-tr from-zinc-300/20 via-pink-400/30 to-transparent dark:from-zinc-300/5 dark:via-pink-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-pink-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-pink-400/30 transition-all py-4 px-10"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (

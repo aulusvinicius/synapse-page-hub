@@ -85,7 +85,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <div className="space-y-8 max-w-4xl mx-auto text-center">
               <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl leading-tight bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                 {subtitle.regular}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500">
                   {subtitle.gradient}
                 </span>
               </h2>

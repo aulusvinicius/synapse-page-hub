@@ -2,11 +2,15 @@ version: "3.8"
 
 services:
   neoflow-web:
-    image: nginx:alpine  # Imagem simples para teste
+    image: your-registry/neoflow-web:latest  # Sua imagem customizada
     networks:
       - network_swarm_public
     deploy:
       replicas: 1
+      placement:
+        constraints:
+          # Você pode rodar o Editor no Manager mesmo pois usa poucos recursos
+          - node.role == manager
       restart_policy:
         condition: on-failure
         delay: 5s

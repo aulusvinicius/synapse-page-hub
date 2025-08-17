@@ -137,6 +137,14 @@ export default {
 					'100%': {
 						transform: 'translateY(200%)'
 					}
+				},
+				'grid': {
+					'0%': {
+						transform: 'translateX(-50%)'
+					},
+					'100%': {
+						transform: 'translateX(50%)'
+					}
 				}
 			},
 			animation: {
@@ -147,7 +155,8 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'flow': 'flow linear infinite',
 				'flow-horizontal': 'flow-horizontal 8s linear infinite',
-				'flow-vertical': 'flow-vertical 12s linear infinite'
+				'flow-vertical': 'flow-vertical 12s linear infinite',
+				'grid': 'grid 15s linear infinite'
 			},
 			backgroundImage: {
 				'tech-gradient': 'var(--tech-gradient)',

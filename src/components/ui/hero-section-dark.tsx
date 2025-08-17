@@ -66,8 +66,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         gradient: "the largest figma UI kit.",
       },
       description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-      ctaText = "Browse courses",
-      ctaHref = "#",
+      ctaText = "Nossas soluções",
+      ctaHref = "#services",
       bottomImage = {
         light: "https://farmui.vercel.app/dashboard-light.png",
         dark: "https://farmui.vercel.app/dashboard.png",

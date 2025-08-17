@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))] border-t border-border">
+    <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">

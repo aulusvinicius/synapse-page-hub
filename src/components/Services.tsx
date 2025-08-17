@@ -36,7 +36,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-purple-500 dark:from-white dark:via-purple-200 dark:to-purple-400 leading-relaxed py-2">

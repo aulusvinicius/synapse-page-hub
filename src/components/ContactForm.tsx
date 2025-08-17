@@ -55,7 +55,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">

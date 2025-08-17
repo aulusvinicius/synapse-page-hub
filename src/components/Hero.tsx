@@ -7,30 +7,50 @@ const Hero = () => {
   const vantaEffect = useRef<any>(null);
 
   useEffect(() => {
+    const loadScript = (src: string): Promise<void> => {
+      return new Promise((resolve, reject) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+          resolve();
+          return;
+        }
+        
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+        document.head.appendChild(script);
+      });
+    };
+
     const initVanta = async () => {
       if (vantaRef.current && !vantaEffect.current) {
-        // Dynamically import Vanta and Three.js
-        const VANTA = (await import('vanta')).default;
-        const THREE = (await import('three')).default;
-        
-        // Initialize the NET effect
-        vantaEffect.current = VANTA.NET({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0xec4899, // neo-pink color
-          backgroundColor: 0x0f0f0f, // dark background
-          points: 10.00,
-          maxDistance: 23.00,
-          spacing: 17.00,
-          showDots: false
-        });
+        try {
+          // Load Three.js first
+          await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js');
+          
+          // Then load Vanta NET effect
+          await loadScript('https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js');
+          
+          // Initialize the NET effect
+          vantaEffect.current = (window as any).VANTA.NET({
+            el: vantaRef.current,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xec4899, // neo-pink color
+            backgroundColor: 0x0a0a0a, // dark background
+            points: 10.00,
+            maxDistance: 23.00,
+            spacing: 17.00,
+            showDots: false
+          });
+        } catch (error) {
+          console.error('Error loading Vanta.js:', error);
+        }
       }
     };
 

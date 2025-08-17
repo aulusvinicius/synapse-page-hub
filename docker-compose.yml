@@ -1,35 +1,43 @@
 version: "3.8"
+
 services:
-  neoflow-web:
+  synapse-page-hub:
+    image: synapse-page-hub:latest
     build:
       context: .
       dockerfile: Dockerfile
-    restart: unless-stopped
     networks:
       - network_swarm_public
     deploy:
+      replicas: 2
       placement:
         constraints:
-          # Você pode rodar o Editor no Manager mesmo pois usa poucos recursos
           - node.role == manager
-    labels:
-      # Traefik configuration
-      - "traefik.enable=true"
-      - "traefik.docker.network=network_swarm_public"
-      # HTTP redirect to HTTPS
-      - "traefik.http.routers.neoflow-web-http.rule=Host(`www.neoflow.com.br`)"
-      - "traefik.http.routers.neoflow-web-http.entrypoints=web"
-      - "traefik.http.routers.neoflow-web-http.middlewares=redirect-to-https"
-      # HTTPS configuration
-      - "traefik.http.routers.neoflow-web-https.rule=Host(`www.neoflow.com.br`)"
-      - "traefik.http.routers.neoflow-web-https.entrypoints=websecure"
-      - "traefik.http.routers.neoflow-web-https.tls=true"
-      - "traefik.http.routers.neoflow-web-https.tls.certresolver=myresolver"
-      # Service configuration
-      - "traefik.http.services.neoflow-web.loadbalancer.server.port=80"
-      # Redirect middleware
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=network_swarm_public"
+        - "traefik.http.services.synapse-page-hub.loadbalancer.server.port=80"
+
+        # HTTP Router - redireciona para HTTPS
+        - "traefik.http.routers.synapse-page-hub-http.rule=Host(⁠ www.neoflow.com.br ⁠)"
+        - "traefik.http.routers.synapse-page-hub-http.entrypoints=web"
+        - "traefik.http.routers.synapse-page-hub-http.middlewares=redirect-https@docker"
+
+        # HTTPS Router
+        - "traefik.http.routers.synapse-page-hub-https.rule=Host(⁠ www.neoflow.com.br ⁠)"
+        - "traefik.http.routers.synapse-page-hub-https.entrypoints=websecure"
+        - "traefik.http.routers.synapse-page-hub-https.tls=true"
+        - "traefik.http.routers.synapse-page-hub-https.tls.certresolver=letsencryptresolver"
+
+        # Middlewares para segurança
+        - "traefik.http.middlewares.synapse-security.headers.customrequestheaders.X-Forwarded-Proto=https"
+        - "traefik.http.middlewares.synapse-security.headers.customrequestheaders.X-Forwarded-Port=443"
+        - "traefik.http.middlewares.synapse-security.headers.customrequestheaders.X-Forwarded-Host=www.neoflow.com.br"
+        - "traefik.http.routers.synapse-page-hub-https.middlewares=synapse-security@docker"
 
 networks:
   network_swarm_public:

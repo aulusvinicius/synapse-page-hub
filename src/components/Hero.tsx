@@ -11,7 +11,10 @@ const Hero = () => {
       description="Soluções completas em virtualização, automação, comunicação omnichannel, CRM e gestão de documentos para impulsionar sua empresa rumo ao futuro digital."
       ctaText="Conhecer Soluções"
       ctaHref="#services"
-      bottomImage={undefined}
+      bottomImage={{
+        light: "https://www.launchuicomponents.com/app-light.png",
+        dark: "https://www.launchuicomponents.com/app-dark.png",
+      }}
       gridOptions={{
         angle: 65,
         opacity: 0.4,

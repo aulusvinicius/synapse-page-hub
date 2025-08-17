@@ -45,19 +45,19 @@ const ContactForm = () => {
               <h3 className="text-2xl font-semibold mb-6">Por que escolher a NeoFlow?</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Soluções personalizadas para cada necessidade empresarial</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Tecnologia de ponta com suporte especializado</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Implementação rápida e eficiente</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">ROI comprovado e resultados mensuráveis</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ const ContactForm = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full" 
+                    className="w-full bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border border-input hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all" 
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

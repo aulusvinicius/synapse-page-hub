@@ -79,8 +79,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
   ) => {
     return (
       <div className={cn("relative", className)} ref={ref} {...props}>
-        <div className="absolute top-0 z-[0] h-screen w-screen bg-[radial-gradient(ellipse_50%_120%_at_50%_-20%,rgba(120,119,198,0.35),rgba(255,255,255,0))]" />
-        <div className="absolute top-0 z-[0] h-screen w-screen bg-[radial-gradient(circle_at_50%_0%,rgba(120,119,198,0.15),transparent_70%)]" />
+        <div className="absolute top-0 z-[0] h-screen w-screen bg-[radial-gradient(ellipse_42%_100%_at_50%_-20%,rgba(120,119,198,0.27),rgba(255,255,255,0))]" />
         <section className="relative max-w-full mx-auto z-1">
           <div className="max-w-screen-xl z-10 mx-auto px-4 pt-32 pb-16 gap-12 md:px-8">
             <div className="space-y-8 max-w-4xl mx-auto text-center">

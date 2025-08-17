@@ -94,8 +94,10 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 {description}
               </p>
               <div className="mt-16 flex items-center justify-center">
-                <button
-                  onClick={() => {
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault();
                     setTimeout(() => {
                       const element = document.getElementById('services');
                       if (element) {
@@ -115,7 +117,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                       {ctaText}
                     </span>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
             <div className="mt-20 mx-4 relative z-10">

@@ -39,7 +39,7 @@ const CpuArchitecture = ({
         strokeDasharray="100 100"
         pathLength="100"
         markerStart="url(#cpu-circle-marker)"
-        opacity="0.5"
+        opacity="0.25"
       >
         {/* 1st */}
         <path

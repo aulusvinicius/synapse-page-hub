@@ -96,26 +96,29 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               </p>
             </div>
             
-            {/* Botão fora da estrutura do grid para evitar conflitos */}
-            <div className="flex justify-center pt-4 relative z-30">
-              <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
-                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                <Button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Botão clicado!'); // Debug
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="relative z-40 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-sm font-medium backdrop-blur-3xl bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-3 px-8"
-                  style={{ pointerEvents: 'auto' }}
-                >
-                  Contate-nos
-                </Button>
-              </span>
+            {/* Botão simplificado para teste */}
+            <div className="flex justify-center pt-4 relative z-50">
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  console.log('Botão clicado!'); // Debug
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.log('Seção contact não encontrada');
+                  }
+                }}
+                className="relative z-50 inline-flex cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-sm font-medium bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-3 px-8"
+                style={{ 
+                  pointerEvents: 'auto',
+                  position: 'relative',
+                  zIndex: 9999
+                }}
+              >
+                Contate-nos
+              </Button>
             </div>
             
             <div className="mt-10 mx-4 relative z-10">

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import SolutionsCarousel from "@/components/SolutionsCarousel"
+import { ParticleTextEffect } from "@/components/ui/particle-text-effect"
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -107,7 +107,16 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               </div>
             </div>
             <div className="mt-32 mx-10 relative z-10">
-              <SolutionsCarousel />
+              <ParticleTextEffect 
+                words={[
+                  "Cloud & Virtualização",
+                  "Automações", 
+                  "Comunicação Omnichannel",
+                  "Gerenciador de Documentos",
+                  "Painéis Gerenciais",
+                  "CRM"
+                ]}
+              />
             </div>
           </div>
         </section>

@@ -18,8 +18,13 @@ const Header = () => {
             className="h-16 w-auto"
           />
         </div>
+        <div className="hidden md:block">
+          <NavBar items={navItems} />
+        </div>
       </div>
-      <NavBar items={navItems} />
+      <div className="md:hidden">
+        <NavBar items={navItems} />
+      </div>
     </header>
   );
 };

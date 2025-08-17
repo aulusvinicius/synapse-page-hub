@@ -159,16 +159,6 @@ const Contact = () => {
                     <p className="text-muted-foreground">(38) 99836-6849</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-neo-pink/10 rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="h-6 w-6 text-neo-pink" />
-                  </div>
-                  <div>
-                    <p className="text-foreground font-semibold">Endereço</p>
-                    <p className="text-muted-foreground"></p>
-                  </div>
-                </div>
               </div>
             </div>
 

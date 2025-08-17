@@ -92,7 +92,7 @@ const ContactForm = () => {
             
             <Card className="border-border/50">
               <CardHeader>
-                <CardTitle>Solicite uma Consulta Gratuita</CardTitle>
+                <CardTitle>Solicite uma demonstração</CardTitle>
                 <CardDescription>
                   Preencha o formulário e nossa equipe entrará em contato para apresentar a melhor solução para sua empresa.
                 </CardDescription>

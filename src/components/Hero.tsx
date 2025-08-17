@@ -5,8 +5,8 @@ const Hero = () => {
     <HeroSection
       title=""
       subtitle={{
-        regular: "Transforme suas ideias em ",
-        gradient: "experiências digitais extraordinárias",
+        regular: "A transformação digital do seu negócio ",
+        gradient: "passa por aqui.",
       }}
       description="Transforme suas ideias em realidade com nossa suíte abrangente de ferramentas de desenvolvimento e recursos digitais para empresas."
       gridOptions={{

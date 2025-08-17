@@ -99,9 +99,9 @@ const ContactForm = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-2">
+                  <div className="space-y-2 form-field-focus">
                     <Label htmlFor="name">Nome Completo</Label>
-                    <Input 
+                    <Input
                       id="name" 
                       name="name" 
                       placeholder="Seu nome completo" 
@@ -109,7 +109,7 @@ const ContactForm = () => {
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 form-field-focus">
                     <Label htmlFor="email">E-mail Corporativo</Label>
                     <Input 
                       id="email" 
@@ -120,7 +120,7 @@ const ContactForm = () => {
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 form-field-focus">
                     <Label htmlFor="phone">Telefone</Label>
                     <Input 
                       id="phone" 
@@ -131,7 +131,7 @@ const ContactForm = () => {
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 form-field-focus">
                     <Label htmlFor="company">Empresa</Label>
                     <Input 
                       id="company" 
@@ -140,7 +140,7 @@ const ContactForm = () => {
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 form-field-focus">
                     <Label htmlFor="message">Mensagem (Opcional)</Label>
                     <Textarea 
                       id="message" 

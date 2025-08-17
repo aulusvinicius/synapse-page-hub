@@ -124,6 +124,23 @@ All colors MUST be HSL.
   }
 }
 
+/* Form field customization */
+.form-field-focus input:focus,
+.form-field-focus textarea:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px hsl(var(--neo-pink) / 0.5);
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink))) border-box;
+  border: 2px solid transparent;
+}
+
+.dark .form-field-focus input:focus,
+.dark .form-field-focus textarea:focus {
+  background: linear-gradient(hsl(240 10% 3.9%), hsl(240 10% 3.9%)) padding-box, 
+              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink))) border-box;
+  border: 2px solid transparent;
+}
+
 /* CPU Architecture Animations */
 .cpu-architecture {
   offset-anchor: 10px 0px;

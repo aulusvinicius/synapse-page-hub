@@ -13,7 +13,7 @@ const Footer = () => {
           
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © 2024 NeoFlow. Todos os direitos reservados.
+              © 2025 neoflow. Todos os direitos reservados.
             </p>
           </div>
           

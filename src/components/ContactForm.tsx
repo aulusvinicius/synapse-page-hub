@@ -15,16 +15,43 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      company: formData.get('company'),
+      message: formData.get('message'),
+      timestamp: new Date().toISOString(),
+      triggered_from: window.location.origin,
+    };
+
+    try {
+      await fetch('https://webhooks.neoflow.com.br/webhook/d5eca59b-b39c-4bec-81fb-a331075d22cf', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify(data),
+      });
+
+      toast({
+        title: "Mensagem enviada!",
+        description: "Entraremos em contato em breve.",
+      });
+
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error("Error sending form:", error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente em alguns instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

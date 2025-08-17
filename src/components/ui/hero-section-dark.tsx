@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
+import { CpuArchitecture } from "@/components/ui/cpu-architecture"
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -106,20 +107,16 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 </span>
               </div>
             </div>
-            {bottomImage && (
-              <div className="mt-32 mx-10 relative z-10">
-                <img
-                  src={bottomImage.light}
-                  className="w-full shadow-lg rounded-lg border border-gray-200 dark:hidden"
-                  alt="Dashboard preview"
-                />
-                <img
-                  src={bottomImage.dark}
-                  className="hidden w-full shadow-lg rounded-lg border border-gray-800 dark:block"
-                  alt="Dashboard preview"
+            <div className="mt-32 mx-10 relative z-10">
+              <div className="p-8 rounded-xl bg-accent/20 backdrop-blur-sm border border-border/20">
+                <CpuArchitecture 
+                  text="NEOFLOW"
+                  className="w-full h-auto max-w-4xl mx-auto text-foreground"
+                  width="100%"
+                  height="200"
                 />
               </div>
-            )}
+            </div>
           </div>
         </section>
       </div>

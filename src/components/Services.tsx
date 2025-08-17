@@ -39,7 +39,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-muted-foreground via-purple-500 to-purple-400 dark:from-muted-foreground dark:via-purple-300 dark:to-purple-400 leading-relaxed py-2">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-purple-500 dark:from-white dark:via-purple-200 dark:to-purple-400 leading-relaxed py-2">
             Nossas Soluções Digitais
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

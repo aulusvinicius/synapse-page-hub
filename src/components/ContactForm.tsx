@@ -59,7 +59,7 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-muted-foreground via-purple-500 to-purple-400 dark:from-muted-foreground dark:via-purple-300 dark:to-purple-400">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-500 dark:from-white dark:via-purple-200 dark:to-purple-400">
               Sua empresa a um clique da disrupção digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

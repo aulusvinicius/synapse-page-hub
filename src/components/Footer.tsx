@@ -3,11 +3,12 @@ const Footer = () => {
     <footer className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">N</span>
-            </div>
-            <span className="font-semibold">NeoFlow</span>
+          <div className="flex items-center mb-4 md:mb-0">
+            <img 
+              src="/lovable-uploads/bc55fd02-9c67-45bd-81bc-a76fcd76ed62.png" 
+              alt="NeoFlow"
+              className="h-6 w-auto"
+            />
           </div>
           
           <div className="text-center md:text-left">

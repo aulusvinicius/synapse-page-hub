@@ -107,7 +107,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 </span>
               </div>
             </div>
-            <div className="mt-32 mx-10 relative z-10">
+            <div className="mt-16 mx-10 relative z-10">
               <div className="p-8">
                 <CpuArchitecture 
                   text="neoflow"

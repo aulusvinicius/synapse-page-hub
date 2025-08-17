@@ -11,6 +11,7 @@ const Hero = () => {
       description="Soluções completas em virtualização, automação, comunicação omnichannel, CRM e gestão de documentos para impulsionar sua empresa rumo ao futuro digital."
       ctaText="Conhecer Soluções"
       ctaHref="#services"
+      bottomImage={undefined}
       gridOptions={{
         angle: 65,
         opacity: 0.4,

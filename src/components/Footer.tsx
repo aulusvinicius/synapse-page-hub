@@ -7,7 +7,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/721eed06-04b2-4134-ab5c-0af3a86ee878.png" 
               alt="NeoFlow"
-              className="h-6 w-auto"
+              className="h-12 w-auto"
             />
           </div>
           

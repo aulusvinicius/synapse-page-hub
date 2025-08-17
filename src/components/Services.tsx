@@ -10,7 +10,7 @@ const services = [
   {
     icon: Zap,
     title: "Automações",
-    description: "Automatize processos complexos e aumente a produtividade com nossas soluções inteligentes de automação."
+    description: "Automatize processos complexos e aumente a produtividade com nossas soluções inteligentes com I.A."
   },
   {
     icon: MessageCircle,

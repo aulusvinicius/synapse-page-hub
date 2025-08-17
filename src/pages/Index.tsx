@@ -1,17 +1,12 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Services />
-      <Contact />
-      <Footer />
+      <h1 className="text-4xl font-bold text-center pt-20">
+        Novo Projeto
+      </h1>
+      <p className="text-center text-muted-foreground mt-4">
+        Começando do zero
+      </p>
     </div>
   );
 };

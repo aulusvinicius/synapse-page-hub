@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, Zap, MessageCircle, FileText, BarChart } from "lucide-react";
+import { Cloud, Zap, MessageCircle, FileText, BarChart, Users } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,11 @@ const services = [
     icon: BarChart,
     title: "Painéis Gerenciais",
     description: "Dashboards inteligentes com analytics em tempo real para tomada de decisões estratégicas."
+  },
+  {
+    icon: Users,
+    title: "CRM",
+    description: "Sistema completo de gestão de relacionamento com clientes para otimizar vendas e fidelização."
   }
 ];
 

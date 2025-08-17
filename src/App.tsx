@@ -13,9 +13,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
+      defaultTheme="dark"
+      enableSystem={false}
+      forcedTheme="dark"
     >
       <TooltipProvider>
         <Toaster />

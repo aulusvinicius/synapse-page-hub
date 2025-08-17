@@ -1,5 +1,4 @@
 import { NavBar } from "@/components/ui/tubelight-navbar";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Home, Settings, MessageCircle } from "lucide-react";
 
 const Header = () => {
@@ -18,9 +17,6 @@ const Header = () => {
             alt="NeoFlow"
             className="h-8 w-auto"
           />
-        </div>
-        <div className="flex items-center">
-          <ThemeToggle />
         </div>
       </div>
       <NavBar items={navItems} />

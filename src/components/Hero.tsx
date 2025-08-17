@@ -9,8 +9,6 @@ const Hero = () => {
         gradient: "experiências digitais extraordinárias",
       }}
       description="Transforme suas ideias em realidade com nossa suíte abrangente de ferramentas de desenvolvimento e recursos digitais para empresas."
-      ctaText="Começar Agora"
-      ctaHref="#contact"
       gridOptions={{
         angle: 65,
         opacity: 0.4,

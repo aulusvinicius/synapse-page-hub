@@ -59,7 +59,7 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 py-2 leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500">
               Sua empresa a um clique da disrupção digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -72,19 +72,19 @@ const ContactForm = () => {
               <h3 className="text-2xl font-semibold mb-6">Por que escolher a NeoFlow?</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Soluções personalizadas para cada necessidade empresarial</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Tecnologia de ponta com suporte especializado</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">Implementação rápida e eficiente</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-purple-400 dark:from-purple-300 dark:to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">ROI comprovado e resultados mensuráveis</p>
                 </div>
               </div>

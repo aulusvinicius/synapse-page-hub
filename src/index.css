@@ -19,7 +19,7 @@ All colors MUST be HSL.
     --popover-foreground: 240 10% 3.9%;
 
     /* Neo.Flow Brand Colors - consistent across modes */
-    --primary: 340 82% 52%;
+    --primary: 250 50% 35%;
     --primary-foreground: 0 0% 98%;
     
     --secondary: 250 50% 35%;
@@ -36,17 +36,17 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 340 82% 52%;
+    --ring: 250 50% 35%;
 
     /* Custom Design Tokens */
     --neo-blue: 250 50% 35%;
-    --neo-pink: 340 82% 52%;
-    --tech-gradient: linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink)));
-    --glow-gradient: linear-gradient(90deg, hsl(var(--neo-pink) / 0.3), hsl(var(--neo-blue) / 0.3));
+    --neo-purple: 250 50% 35%;
+    --tech-gradient: linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-purple)));
+    --glow-gradient: linear-gradient(90deg, hsl(var(--neo-purple) / 0.3), hsl(var(--neo-blue) / 0.3));
     --surface-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--neo-pink) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--neo-purple) / 0.2);
     --shadow-tech: 0 10px 30px -10px hsl(var(--neo-blue) / 0.3);
     --shadow-elevated: 0 20px 50px -15px hsl(240 10% 10% / 0.1);
 
@@ -78,7 +78,7 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 98%;
 
     /* Keep brand colors consistent */
-    --primary: 340 82% 62%;
+    --primary: 250 50% 35%;
     --primary-foreground: 0 0% 98%;
     
     --secondary: 250 50% 35%;
@@ -95,11 +95,11 @@ All colors MUST be HSL.
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 340 82% 62%;
+    --ring: 250 50% 35%;
 
     /* Dark mode design tokens */
     --surface-gradient: linear-gradient(145deg, hsl(240 10% 3.9%), hsl(240 7% 8%));
-    --shadow-glow: 0 0 40px hsl(var(--neo-pink) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--neo-purple) / 0.3);
     --shadow-tech: 0 10px 30px -10px hsl(var(--neo-blue) / 0.4);
     --shadow-elevated: 0 20px 50px -15px hsl(240 10% 1% / 0.6);
 
@@ -128,16 +128,16 @@ All colors MUST be HSL.
 .form-field-focus input:focus,
 .form-field-focus textarea:focus {
   border-color: transparent;
-  box-shadow: 0 0 0 2px hsl(var(--neo-pink) / 0.5);
+  box-shadow: 0 0 0 2px hsl(var(--neo-purple) / 0.5);
   background: linear-gradient(white, white) padding-box, 
-              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink))) border-box;
+              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-purple))) border-box;
   border: 2px solid transparent;
 }
 
 .dark .form-field-focus input:focus,
 .dark .form-field-focus textarea:focus {
   background: linear-gradient(hsl(240 10% 3.9%), hsl(240 10% 3.9%)) padding-box, 
-              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-pink))) border-box;
+              linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-purple))) border-box;
   border: 2px solid transparent;
 }
 

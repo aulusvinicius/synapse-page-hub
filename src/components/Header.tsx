@@ -4,7 +4,7 @@ import { Home, Settings, MessageCircle } from "lucide-react";
 const Header = () => {
   const navItems = [
     { name: 'Início', url: '#', icon: Home },
-    { name: 'Serviços', url: '#services', icon: Settings },
+    { name: 'Soluções', url: '#services', icon: Settings },
     { name: 'Contato', url: '#contact', icon: MessageCircle }
   ];
 

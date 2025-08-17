@@ -33,7 +33,7 @@ const ContactForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
-              A evolução digital do seu negócio a um clique
+              Sua empresa a um clique da disrupção digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Entre em contato conosco e descubra como nossas soluções podem impulsionar seu negócio.

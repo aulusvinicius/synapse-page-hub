@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/ui/hero-section-dark";
 const Hero = () => {
   return (
     <HeroSection
-      title="Bem-vindo à NeoFlow"
       subtitle={{
         regular: "Transforme suas ideias em ",
         gradient: "experiências digitais extraordinárias",

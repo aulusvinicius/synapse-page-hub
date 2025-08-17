@@ -27,7 +27,7 @@ const ContactForm = () => {
     };
 
     try {
-      await fetch('https://webhooks.neoflow.com.br/webhook/d5eca59b-b39c-4bec-81fb-a331075d22cf', {
+      await fetch('https://webhooks.neoflow.com.br/webhook/form-neoflow', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -108,7 +108,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               </div>
             </div>
             <div className="mt-32 mx-10 relative z-10">
-              <div className="p-8 rounded-xl bg-accent/20 backdrop-blur-sm border border-border/20">
+              <div className="p-8">
                 <CpuArchitecture 
                   text="NEOFLOW"
                   className="w-full h-auto max-w-4xl mx-auto text-foreground"

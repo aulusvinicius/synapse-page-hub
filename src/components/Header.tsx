@@ -11,11 +11,12 @@ const Header = () => {
   return (
     <header className="relative">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">N</span>
-          </div>
-          <h1 className="text-xl font-bold">NeoFlow</h1>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/bc55fd02-9c67-45bd-81bc-a76fcd76ed62.png" 
+            alt="NeoFlow"
+            className="h-8 w-auto"
+          />
         </div>
       </div>
       <NavBar items={navItems} />

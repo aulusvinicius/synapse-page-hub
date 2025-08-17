@@ -234,7 +234,7 @@ const CpuArchitecture = ({
         <text
           x="92"
           y="52.5"
-          fontSize="7"
+          fontSize="2.1"
           fill={animateText ? "url(#cpu-text-gradient)" : "white"}
           fontWeight="600"
           letterSpacing="0.05em"

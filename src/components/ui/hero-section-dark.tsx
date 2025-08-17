@@ -110,7 +110,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <div className="mt-32 mx-10 relative z-10">
               <div className="p-8">
                 <CpuArchitecture 
-                  text="NEOFLOW"
+                  text="neoflow"
                   className="w-full h-auto max-w-4xl mx-auto text-foreground"
                   width="100%"
                   height="200"

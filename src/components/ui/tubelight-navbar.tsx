@@ -34,9 +34,14 @@ export function NavBar({ items, className }: NavBarProps) {
     setActiveTab(item.name)
     // Smooth scroll to section
     if (item.url.startsWith('#')) {
-      const element = document.querySelector(item.url)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+      if (item.url === '#') {
+        // Scroll to top for home link
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        const element = document.querySelector(item.url)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
       }
     }
   }

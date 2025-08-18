@@ -90,39 +90,41 @@ const ContactForm = () => {
                 </div>
               </div>
               
-              <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden px-20 pb-20 pt-8">
-                <IconCloud iconSlugs={[
-                  "typescript",
-                  "javascript",
-                  "react",
-                  "nextdotjs",
-                  "nodejs",
-                  "python",
-                  "postgresql",
-                  "mongodb",
-                  "docker",
-                  "kubernetes",
-                  "amazonaws",
-                  "googlecloud",
-                  "microsoftazure",
-                  "git",
-                  "github",
-                  "gitlab",
-                  "jenkins",
-                  "terraform",
-                  "ansible",
-                  "prometheus",
-                  "grafana",
-                  "elasticsearch",
-                  "redis",
-                  "nginx",
-                  "apache",
-                  "linux",
-                  "ubuntu",
-                  "centos",
-                  "figma",
-                  "adobexd"
-                ]} />
+              <div className="flex items-center justify-center w-full -mt-12">
+                <div className="relative flex items-center justify-center overflow-hidden scale-130 px-20 pb-20 pt-8">
+                  <IconCloud iconSlugs={[
+                    "typescript",
+                    "javascript",
+                    "react",
+                    "nextdotjs",
+                    "nodejs",
+                    "python",
+                    "postgresql",
+                    "mongodb",
+                    "docker",
+                    "kubernetes",
+                    "amazonaws",
+                    "googlecloud",
+                    "microsoftazure",
+                    "git",
+                    "github",
+                    "gitlab",
+                    "jenkins",
+                    "terraform",
+                    "ansible",
+                    "prometheus",
+                    "grafana",
+                    "elasticsearch",
+                    "redis",
+                    "nginx",
+                    "apache",
+                    "linux",
+                    "ubuntu",
+                    "centos",
+                    "figma",
+                    "adobexd"
+                  ]} />
+                </div>
               </div>
             </div>
             

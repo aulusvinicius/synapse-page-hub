@@ -15,7 +15,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/e8419268-754f-4e5f-8fad-ae03f4913f4b.png" 
             alt="NeoFlow"
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </div>
       </div>

@@ -91,7 +91,7 @@ const ContactForm = () => {
               </div>
               
               <div className="flex items-center justify-start w-full -mt-7 -ml-8">
-                <div className="relative flex items-center justify-center overflow-hidden scale-130 px-20 pb-20 pt-8">
+                <div className="relative flex items-center justify-center overflow-hidden scale-150 px-20 pb-20 pt-8">
                   <IconCloud iconSlugs={[
                     "typescript",
                     "javascript",

@@ -1,38 +1,79 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, Zap, MessageCircle, FileText, BarChart, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { IconCloud, IconBolt, IconMessage, IconFileText, IconChartBar, IconUsers } from "@tabler/icons-react";
 
 const services = [
   {
-    icon: Cloud,
+    icon: <IconCloud />,
     title: "Cloud & Virtualização",
     description: "Soluções robustas de cloud computing e virtualização para maximizar a eficiência da sua infraestrutura."
   },
   {
-    icon: Zap,
+    icon: <IconBolt />,
     title: "Automações",
     description: "Automatize processos complexos e aumente a produtividade com nossas soluções inteligentes com I.A."
   },
   {
-    icon: MessageCircle,
+    icon: <IconMessage />,
     title: "Comunicação Omnichannel",
     description: "Integre todos os canais de comunicação em uma plataforma única e ofereça experiências consistentes."
   },
   {
-    icon: FileText,
+    icon: <IconFileText />,
     title: "Gerenciador de Documentos",
     description: "Organize, armazene e gerencie documentos com segurança e eficiência em um sistema centralizado."
   },
   {
-    icon: BarChart,
+    icon: <IconChartBar />,
     title: "Painéis Gerenciais",
     description: "Dashboards inteligentes com analytics em tempo real para tomada de decisões estratégicas."
   },
   {
-    icon: Users,
+    icon: <IconUsers />,
     title: "CRM",
     description: "Sistema completo de gestão de relacionamento com clientes para otimizar vendas e fidelização."
   }
 ];
+
+const Feature = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
+        (index === 0 || index === 3) && "lg:border-l dark:border-neutral-800",
+        index < 3 && "lg:border-b dark:border-neutral-800"
+      )}
+    >
+      {index < 3 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
+      {index >= 3 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
+      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
+        {icon}
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-pink-500 transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100">
+          {title}
+        </span>
+      </div>
+      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+        {description}
+      </p>
+    </div>
+  );
+};
 
 const Services = () => {
   return (
@@ -47,21 +88,9 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-tr from-zinc-300/20 via-pink-400/30 to-transparent dark:from-zinc-300/5 dark:via-pink-400/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gradient-to-tr group-hover:from-zinc-300/30 group-hover:via-pink-400/40 group-hover:to-transparent dark:group-hover:from-zinc-300/10 dark:group-hover:via-pink-400/30 transition-all border border-input">
-                  <service.icon className="h-6 w-6 text-gray-900 dark:text-white" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <Feature key={service.title} title={service.title} description={service.description} icon={service.icon} index={index} />
           ))}
         </div>
       </div>

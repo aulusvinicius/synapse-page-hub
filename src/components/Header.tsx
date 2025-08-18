@@ -13,7 +13,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/e8419268-754f-4e5f-8fad-ae03f4913f4b.png" 
+            src="/lovable-uploads/b16e495f-6476-43b3-b760-922274b90a86.png" 
             alt="NeoFlow"
             className="h-20 w-auto"
           />

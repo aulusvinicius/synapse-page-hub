@@ -43,7 +43,7 @@ const Services = () => {
             Nossas Soluções Digitais
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Oferecemos uma gama completa de serviços digitais para transformar e modernizar sua empresa.
+            Oferecemos uma gama completa de produtos e serviços digitais para transformar e modernizar sua empresa.
           </p>
         </div>
         

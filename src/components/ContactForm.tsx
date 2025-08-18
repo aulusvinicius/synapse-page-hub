@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -87,6 +88,41 @@ const ContactForm = () => {
                   <div className="w-2 h-2 bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-300 dark:to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">ROI comprovado e resultados mensuráveis</p>
                 </div>
+              </div>
+              
+              <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden px-20 pb-20 pt-8">
+                <IconCloud iconSlugs={[
+                  "typescript",
+                  "javascript",
+                  "react",
+                  "nextdotjs",
+                  "nodejs",
+                  "python",
+                  "postgresql",
+                  "mongodb",
+                  "docker",
+                  "kubernetes",
+                  "amazonaws",
+                  "googlecloud",
+                  "microsoftazure",
+                  "git",
+                  "github",
+                  "gitlab",
+                  "jenkins",
+                  "terraform",
+                  "ansible",
+                  "prometheus",
+                  "grafana",
+                  "elasticsearch",
+                  "redis",
+                  "nginx",
+                  "apache",
+                  "linux",
+                  "ubuntu",
+                  "centos",
+                  "figma",
+                  "adobexd"
+                ]} />
               </div>
             </div>
             

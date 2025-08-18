@@ -122,7 +122,10 @@ const ContactForm = () => {
                     "ubuntu",
                     "centos",
                     "figma",
-                    "adobexd"
+                    "adobexd",
+                    "n8n",
+                    "chatwoot",
+                    "supabase"
                   ]} />
                 </div>
               </div>

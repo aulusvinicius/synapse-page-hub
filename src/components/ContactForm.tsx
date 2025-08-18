@@ -125,7 +125,12 @@ const ContactForm = () => {
                     "adobexd",
                     "n8n",
                     "chatwoot",
-                    "supabase"
+                    "supabase",
+                    "openai",
+                    "anthropic",
+                    "googlebard",
+                    "meta",
+                    "x"
                   ]} />
                 </div>
               </div>

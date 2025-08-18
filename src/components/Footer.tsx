@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <img 
-              src="/lovable-uploads/721eed06-04b2-4134-ab5c-0af3a86ee878.png" 
+              src="/lovable-uploads/e8419268-754f-4e5f-8fad-ae03f4913f4b.png" 
               alt="NeoFlow"
               className="h-12 w-auto"
             />

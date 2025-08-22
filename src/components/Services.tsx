@@ -81,7 +81,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-300 to-pink-500 dark:from-white dark:via-pink-200 dark:to-pink-400 leading-relaxed py-2">
-            Nossas Soluções Digitais
+            Não importa o tamanho da sua empresa
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Oferecemos uma gama completa de produtos e serviços digitais para transformar e modernizar sua empresa.

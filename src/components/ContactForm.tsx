@@ -10,17 +10,56 @@ import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
   const { toast } = useToast();
+  
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+  
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+    return phoneRegex.test(phone);
+  };
+  
+  const formatPhone = (value: string) => {
+    const numbers = value.replace(/\D/g, '');
+    if (numbers.length <= 11) {
+      return numbers.replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3');
+    }
+    return value;
+  };
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setErrors({});
     
     const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!validateEmail(email)) {
+      newErrors.email = "Por favor, insira um e-mail válido";
+    }
+    
+    if (!validatePhone(phone)) {
+      newErrors.phone = "Por favor, insira um telefone válido no formato (11) 99999-9999";
+    }
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
     const data = {
       name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
+      email: email,
+      phone: phone,
       company: formData.get('company'),
       message: formData.get('message'),
       timestamp: new Date().toISOString(),
@@ -164,7 +203,9 @@ const ContactForm = () => {
                       type="email" 
                       placeholder="seu.email@empresa.com" 
                       required 
+                      className={errors.email ? "border-red-500" : ""}
                     />
+                    {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                   </div>
                   
                   <div className="space-y-2 form-field-focus">
@@ -175,7 +216,12 @@ const ContactForm = () => {
                       type="tel" 
                       placeholder="(11) 99999-9999" 
                       required 
+                      className={errors.phone ? "border-red-500" : ""}
+                      onChange={(e) => {
+                        e.target.value = formatPhone(e.target.value);
+                      }}
                     />
+                    {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
                   </div>
                   
                   <div className="space-y-2 form-field-focus">

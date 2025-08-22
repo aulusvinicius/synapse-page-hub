@@ -4,33 +4,33 @@ import { IconCloud, IconBolt, IconMessage, IconFileText, IconChartBar, IconUsers
 const services = [
   {
     icon: <IconCloud />,
-    title: "Cloud & Virtualização",
-    description: "Soluções robustas de cloud computing e virtualização para maximizar a eficiência da sua infraestrutura."
+    title: "Computação em Nuvem",
+    description: "Hospede seus sistemas e arquivos na nuvem, com segurança e flexibilidade. Assim, sua equipe acessa tudo de qualquer lugar e sua empresa reduz custos com servidores físicos."
   },
   {
     icon: <IconBolt />,
     title: "Automações",
-    description: "Automatize processos complexos e aumente a produtividade com nossas soluções inteligentes com I.A."
+    description: "Deixe tarefas repetitivas no automático. Ganhe tempo e produtividade com fluxos que funcionam sozinhos e podem até usar inteligência artificial."
   },
   {
     icon: <IconMessage />,
-    title: "Comunicação Omnichannel",
-    description: "Integre todos os canais de comunicação em uma plataforma única e ofereça experiências consistentes."
+    title: "Atendimento Multicanal",
+    description: "Centralize WhatsApp, e-mail, chat e redes sociais em uma única tela. Facilite o atendimento e ofereça uma experiência mais rápida e consistente ao cliente."
   },
   {
     icon: <IconFileText />,
-    title: "Gerenciador de Documentos",
-    description: "Organize, armazene e gerencie documentos com segurança e eficiência em um sistema centralizado."
+    title: "Gestão de Documentos",
+    description: "Guarde, organize e compartilhe arquivos em um só lugar, com segurança e controle de acessos."
   },
   {
     icon: <IconChartBar />,
-    title: "Painéis Gerenciais",
-    description: "Dashboards inteligentes com analytics em tempo real para tomada de decisões estratégicas."
+    title: "Painéis de Controle",
+    description: "Acompanhe seus números em tempo real em dashboards visuais. Tome decisões mais rápidas e baseadas em dados."
   },
   {
     icon: <IconUsers />,
-    title: "CRM",
-    description: "Sistema completo de gestão de relacionamento com clientes para otimizar vendas e fidelização."
+    title: "CRM (Gestão de Clientes)",
+    description: "Controle seu funil de vendas, acompanhe o histórico de cada cliente e aumente suas chances de fechar negócios e fidelizar."
   }
 ];
 

@@ -140,7 +140,7 @@ const ContactForm = () => {
               <CardHeader>
                 <CardTitle>Solicite uma demonstração</CardTitle>
                 <CardDescription>
-                  Preencha o formulário e nossa equipe entrará em contato para apresentar a melhor solução para sua empresa.
+                  Descubra o potencial da digitalização, solicite uma demonstração:
                 </CardDescription>
               </CardHeader>
               <CardContent>

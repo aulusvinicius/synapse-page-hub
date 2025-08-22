@@ -89,7 +89,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   {subtitle.gradient}
                 </span>
               </h2>
-              <p className="max-w-2xl mx-auto px-8 md:px-16 text-xl text-muted-foreground leading-relaxed">
+              <p className="max-w-2xl mx-auto px-12 md:px-24 text-xl text-muted-foreground leading-relaxed">
                 {description}
               </p>
             </div>

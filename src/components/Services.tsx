@@ -84,7 +84,7 @@ const Services = () => {
             Não importa o tamanho da sua empresa
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Temos uma gama completa de produtos e serviços digitais de baixo custo para modernizar e alavancar o seu negócio.
+            Cuidamos de toda a sua transformação digital com soluções na medida para alavancar seu negócio, fazendo com que ele cresça com eficiência e segurança.
           </p>
         </div>
         

@@ -8,7 +8,7 @@ const Hero = () => {
         regular: "A transformação digital do seu negócio ",
         gradient: "passa por aqui.",
       }}
-      description="Sua empresa na vanguarda tecnológica com a nossa suíte abrangente de ferramentas de desenvolvimento e recursos digitais."
+      description="Reduza custos, otimize processos, aumente a eficiência operacional e expanda o alcance de mercado do seu negócios com nossas soluções digitais."
       gridOptions={{
         angle: 65,
         opacity: 0.4,

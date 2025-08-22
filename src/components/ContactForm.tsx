@@ -40,6 +40,7 @@ const ContactForm = () => {
       toast({
         title: "Mensagem enviada!",
         description: "Entraremos em contato em breve.",
+        variant: "success",
       });
 
       (e.target as HTMLFormElement).reset();

@@ -104,7 +104,7 @@ const ContactForm = () => {
               Sua empresa a um clique da disrupção digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Entre em contato conosco e descubra como nossas soluções podem impulsionar seu negócio.
+              Fale com a gente e veja como nossas soluções podem acelerar o crescimento do seu negócio.
             </p>
           </div>
           

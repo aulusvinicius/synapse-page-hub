@@ -84,7 +84,7 @@ const Services = () => {
             Não importa o tamanho da sua empresa
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Oferecemos uma gama completa de produtos e serviços digitais para transformar e modernizar sua empresa.
+            Temos uma gama completa de produtos e serviços digitais de baixo custo para modernizar e alavancar o seu negócio.
           </p>
         </div>
         

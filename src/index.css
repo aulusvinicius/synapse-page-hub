@@ -41,9 +41,9 @@ All colors MUST be HSL.
     /* Custom Design Tokens */
     --neo-blue: 335 80% 62%;
     --neo-purple: 335 80% 62%;
-    --tech-gradient: linear-gradient(135deg, hsl(var(--neo-blue)), hsl(var(--neo-purple)));
-    --glow-gradient: linear-gradient(90deg, hsl(var(--neo-purple) / 0.3), hsl(var(--neo-blue) / 0.3));
-    --surface-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
+    --tech-gradient: linear-gradient(135deg, hsl(260 50% 5%), hsl(280 60% 15%), hsl(300 40% 8%));
+    --glow-gradient: radial-gradient(circle at 30% 40%, hsl(280 60% 25% / 0.3), hsl(300 50% 15% / 0.2), transparent);
+    --surface-gradient: linear-gradient(145deg, hsl(260 30% 95%), hsl(280 20% 90%));
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--neo-purple) / 0.2);
@@ -98,7 +98,9 @@ All colors MUST be HSL.
     --ring: 335 80% 62%;
 
     /* Dark mode design tokens */
-    --surface-gradient: linear-gradient(145deg, hsl(240 10% 3.9%), hsl(240 7% 8%));
+    --tech-gradient: linear-gradient(135deg, hsl(260 50% 3%), hsl(280 60% 12%), hsl(300 40% 6%), hsl(260 50% 2%));
+    --glow-gradient: radial-gradient(circle at 30% 40%, hsl(280 60% 20% / 0.4), hsl(300 50% 12% / 0.3), transparent);
+    --surface-gradient: linear-gradient(145deg, hsl(260 30% 5%), hsl(280 40% 8%), hsl(300 30% 5%));
     --shadow-glow: 0 0 40px hsl(var(--neo-purple) / 0.3);
     --shadow-tech: 0 10px 30px -10px hsl(var(--neo-blue) / 0.4);
     --shadow-elevated: 0 20px 50px -15px hsl(240 10% 1% / 0.6);

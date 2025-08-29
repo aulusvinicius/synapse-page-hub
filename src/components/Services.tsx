@@ -77,7 +77,7 @@ const Feature = ({
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background" itemScope itemType="https://schema.org/Service">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-300 to-pink-500 dark:from-white dark:via-pink-200 dark:to-pink-400 leading-relaxed py-2">
@@ -90,7 +90,12 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <Feature key={service.title} title={service.title} description={service.description} icon={service.icon} index={index} />
+            <div key={service.title} itemScope itemType="https://schema.org/Service">
+              <meta itemProp="name" content={service.title} />
+              <meta itemProp="description" content={service.description} />
+              <meta itemProp="provider" content="neoflow" />
+              <Feature title={service.title} description={service.description} icon={service.icon} index={index} />
+            </div>
           ))}
         </div>
       </div>

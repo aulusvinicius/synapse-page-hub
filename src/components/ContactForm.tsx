@@ -100,7 +100,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-background" itemScope itemType="https://schema.org/ContactPage">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">

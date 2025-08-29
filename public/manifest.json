@@ -1,0 +1,26 @@
+{
+  "name": "neoflow - Soluções Tecnológicas Inovadoras",
+  "short_name": "neoflow",
+  "description": "Transforme sua empresa com soluções neoflow: virtualização, omnichannel, CRM, GED, painéis gerenciais e automações",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#f43f5e",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/lovable-uploads/297a9f33-6991-4153-b425-17b245788747.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lovable-uploads/297a9f33-6991-4153-b425-17b245788747.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

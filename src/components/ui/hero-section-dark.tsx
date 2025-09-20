@@ -2,6 +2,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
 import { CpuArchitecture } from "@/components/ui/cpu-architecture"
+import { FloatingParticles } from "@/components/ui/floating-particles"
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -80,8 +81,9 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
     return (
       <div className={cn("relative", className)} ref={ref} {...props}>
         <div className="absolute top-0 z-[0] h-screen w-screen bg-[radial-gradient(ellipse_42%_100%_at_50%_-20%,rgba(120,119,198,0.27),rgba(255,255,255,0))]" />
-        <section className="relative max-w-full mx-auto z-1">
-          <div className="max-w-screen-xl z-10 mx-auto px-4 pt-32 pb-16 gap-12 md:px-8">
+        <FloatingParticles className="z-[1]" particleCount={60} animationSpeed={0.8} />
+        <section className="relative max-w-full mx-auto z-10">
+          <div className="max-w-screen-xl z-20 mx-auto px-4 pt-32 pb-16 gap-12 md:px-8 relative">
             <div className="space-y-8 max-w-4xl mx-auto text-center">
               <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl leading-tight bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                 {subtitle.regular}
@@ -93,7 +95,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 {description}
               </p>
             </div>
-            <div className="mt-10 mx-4 relative z-10">
+            <div className="mt-10 mx-4 relative z-30">
               <div className="py-8">
                 <CpuArchitecture 
                   text="neoflow"

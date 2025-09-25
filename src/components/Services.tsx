@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { IconCloud as TablerIconCloud, IconBolt, IconMessage, IconFileText, IconChartBar, IconUsers } from "@tabler/icons-react";
+import { IconCloud as TablerIconCloud, IconRobot, IconMessage, IconFileText, IconChartBar, IconUsers } from "@tabler/icons-react";
 import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const services = [
@@ -9,7 +9,7 @@ const services = [
     description: "Hospede seus sistemas e arquivos na nuvem, com segurança e flexibilidade. Assim, sua equipe acessa tudo de qualquer lugar e sua empresa reduz custos com servidores físicos."
   },
   {
-    icon: <IconBolt />,
+    icon: <IconRobot />,
     title: "Automações com I.A.",
     description: "Deixe tarefas repetitivas no automático. Ganhe tempo e produtividade com fluxos que funcionam sozinhos e podem até usar inteligência artificial."
   },

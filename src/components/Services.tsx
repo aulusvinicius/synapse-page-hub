@@ -89,10 +89,10 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto min-h-[800px] flex items-center justify-center">
           {/* Centro - IconCloud */}
-          <div className="flex justify-center items-center mb-8">
-            <div className="relative flex items-center justify-center overflow-hidden scale-125 px-20 pb-20 pt-8">
+          <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center overflow-hidden scale-75 px-12 pb-12 pt-6 z-10">
               <IconCloud iconSlugs={[
                 "typescript",
                 "javascript",
@@ -134,13 +134,39 @@ const Services = () => {
                 "x"
               ]} />
             </div>
-          </div>
-          
-          {/* Cards orbitando ao redor */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10">
-            {services.map((service, index) => (
-              <Feature key={service.title} title={service.title} description={service.description} icon={service.icon} index={index} />
-            ))}
+            
+            {/* Cards orbitando ao redor */}
+            <div className="absolute inset-0">
+              {/* Card 1 - Top Left */}
+              <div className="absolute top-0 left-0 w-72 transform -translate-x-1/2 -translate-y-1/2">
+                <Feature {...services[0]} index={0} />
+              </div>
+              
+              {/* Card 2 - Top Right */}
+              <div className="absolute top-0 right-0 w-72 transform translate-x-1/2 -translate-y-1/2">
+                <Feature {...services[1]} index={1} />
+              </div>
+              
+              {/* Card 3 - Middle Left */}
+              <div className="absolute top-1/2 left-0 w-72 transform -translate-x-full -translate-y-1/2">
+                <Feature {...services[2]} index={2} />
+              </div>
+              
+              {/* Card 4 - Middle Right */}
+              <div className="absolute top-1/2 right-0 w-72 transform translate-x-full -translate-y-1/2">
+                <Feature {...services[3]} index={3} />
+              </div>
+              
+              {/* Card 5 - Bottom Left */}
+              <div className="absolute bottom-0 left-0 w-72 transform -translate-x-1/2 translate-y-1/2">
+                <Feature {...services[4]} index={4} />
+              </div>
+              
+              {/* Card 6 - Bottom Right */}
+              <div className="absolute bottom-0 right-0 w-72 transform translate-x-1/2 translate-y-1/2">
+                <Feature {...services[5]} index={5} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

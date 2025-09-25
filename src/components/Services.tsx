@@ -10,7 +10,7 @@ const services = [
   },
   {
     icon: <IconBolt />,
-    title: "Automações",
+    title: "Automações com I.A.",
     description: "Deixe tarefas repetitivas no automático. Ganhe tempo e produtividade com fluxos que funcionam sozinhos e podem até usar inteligência artificial."
   },
   {

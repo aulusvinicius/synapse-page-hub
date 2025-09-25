@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
-import { IconCloud, IconBolt, IconMessage, IconFileText, IconChartBar, IconUsers } from "@tabler/icons-react";
+import { IconCloud as TablerIconCloud, IconBolt, IconMessage, IconFileText, IconChartBar, IconUsers } from "@tabler/icons-react";
+import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 const services = [
   {
-    icon: <IconCloud />,
+    icon: <TablerIconCloud />,
     title: "Computação em Nuvem",
     description: "Hospede seus sistemas e arquivos na nuvem, com segurança e flexibilidade. Assim, sua equipe acessa tudo de qualquer lugar e sua empresa reduz custos com servidores físicos."
   },
@@ -88,10 +89,59 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10 max-w-7xl mx-auto">
-          {services.map((service, index) => (
-            <Feature key={service.title} title={service.title} description={service.description} icon={service.icon} index={index} />
-          ))}
+        <div className="relative max-w-7xl mx-auto">
+          {/* Centro - IconCloud */}
+          <div className="flex justify-center items-center mb-8">
+            <div className="relative flex items-center justify-center overflow-hidden scale-125 px-20 pb-20 pt-8">
+              <IconCloud iconSlugs={[
+                "typescript",
+                "javascript",
+                "react",
+                "nextdotjs",
+                "nodejs",
+                "python",
+                "postgresql",
+                "mongodb",
+                "docker",
+                "kubernetes",
+                "amazonaws",
+                "googlecloud",
+                "microsoftazure",
+                "git",
+                "github",
+                "gitlab",
+                "jenkins",
+                "terraform",
+                "ansible",
+                "prometheus",
+                "grafana",
+                "elasticsearch",
+                "redis",
+                "nginx",
+                "apache",
+                "linux",
+                "ubuntu",
+                "centos",
+                "figma",
+                "adobexd",
+                "n8n",
+                "chatwoot",
+                "supabase",
+                "openai",
+                "anthropic",
+                "googlebard",
+                "meta",
+                "x"
+              ]} />
+            </div>
+          </div>
+          
+          {/* Cards orbitando ao redor */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10">
+            {services.map((service, index) => (
+              <Feature key={service.title} title={service.title} description={service.description} icon={service.icon} index={index} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

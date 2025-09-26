@@ -181,10 +181,12 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         return (
           <div
             key={particle.id}
-            className="absolute will-change-transform"
+            className="absolute transition-opacity duration-300"
             style={{
+              left: `${particle.x}px`,
+              top: `${particle.y}px`,
               opacity: particle.opacity * 0.5,
-              transform: `translate3d(${particle.x - 6}px, ${particle.y - 6}px, 0)`,
+              transform: 'translate(-50%, -50%)',
             }}
           >
             <IconComponent 

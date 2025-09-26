@@ -185,13 +185,13 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
             style={{
               left: `${particle.x}px`,
               top: `${particle.y}px`,
-              opacity: particle.opacity,
+              opacity: particle.opacity * 0.5,
               transform: 'translate(-50%, -50%)',
             }}
           >
             <IconComponent 
               size={12} 
-              className="text-white/80"
+              className="text-white/40"
               strokeWidth={1.5}
             />
           </div>

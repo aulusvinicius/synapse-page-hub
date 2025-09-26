@@ -39,8 +39,7 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const particlesRef = useRef<TechParticle[]>([]);
-  const [, forceUpdate] = useState({});
+  const [particles, setParticles] = useState<TechParticle[]>([]);
   
   const techIcons = [
     IconBrandReact,
@@ -77,19 +76,18 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         id: i,
         x: Math.random() * dimensions.width,
         y: Math.random() * dimensions.height,
-        vx: (Math.random() - 0.5) * 0.05 * animationSpeed,
-        vy: (Math.random() - 0.5) * 0.05 * animationSpeed,
+        vx: (Math.random() - 0.5) * 0.16 * animationSpeed,
+        vy: (Math.random() - 0.5) * 0.16 * animationSpeed,
         icon: techIcons[Math.floor(Math.random() * techIcons.length)],
         opacity: Math.random() * 0.5 + 0.3,
         opacityDirection: Math.random() > 0.5 ? 1 : -1,
       });
     }
-    particlesRef.current = newParticles;
-    forceUpdate({});
+    setParticles(newParticles);
   }, [dimensions, particleCount, animationSpeed]);
 
   useEffect(() => {
-    if (!canvasRef.current || particlesRef.current.length === 0) return;
+    if (!canvasRef.current || particles.length === 0) return;
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
@@ -103,42 +101,44 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update particle positions directly in ref
-      particlesRef.current = particlesRef.current.map(particle => {
-        let newX = particle.x + particle.vx;
-        let newY = particle.y + particle.vy;
+      // Update particle positions
+      setParticles(prevParticles => 
+        prevParticles.map(particle => {
+          let newX = particle.x + particle.vx;
+          let newY = particle.y + particle.vy;
 
-        // Wrap around edges
-        if (newX < 0) newX = dimensions.width;
-        if (newX > dimensions.width) newX = 0;
-        if (newY < 0) newY = dimensions.height;
-        if (newY > dimensions.height) newY = 0;
+          // Wrap around edges
+          if (newX < 0) newX = dimensions.width;
+          if (newX > dimensions.width) newX = 0;
+          if (newY < 0) newY = dimensions.height;
+          if (newY > dimensions.height) newY = 0;
 
-        // Animate opacity
-        let newOpacity = particle.opacity + particle.opacityDirection * 0.003;
-        let newOpacityDirection = particle.opacityDirection;
-        
-        if (newOpacity <= 0.2) {
-          newOpacityDirection = 1;
-          newOpacity = 0.2;
-        }
-        if (newOpacity >= 0.8) {
-          newOpacityDirection = -1;
-          newOpacity = 0.8;
-        }
+          // Animate opacity
+          let newOpacity = particle.opacity + particle.opacityDirection * 0.003;
+          let newOpacityDirection = particle.opacityDirection;
+          
+          if (newOpacity <= 0.2) {
+            newOpacityDirection = 1;
+            newOpacity = 0.2;
+          }
+          if (newOpacity >= 0.8) {
+            newOpacityDirection = -1;
+            newOpacity = 0.8;
+          }
 
-        return {
-          ...particle,
-          x: newX,
-          y: newY,
-          opacity: newOpacity,
-          opacityDirection: newOpacityDirection,
-        };
-      });
+          return {
+            ...particle,
+            x: newX,
+            y: newY,
+            opacity: newOpacity,
+            opacityDirection: newOpacityDirection,
+          };
+        })
+      );
 
       // Draw connections
-      particlesRef.current.forEach((particle, i) => {
-        particlesRef.current.slice(i + 1).forEach((otherParticle) => {
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach((otherParticle) => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -155,11 +155,6 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         });
       });
 
-      // Only force update DOM occasionally to reduce re-renders
-      if (Math.random() < 0.1) {
-        forceUpdate({});
-      }
-
       animationId = requestAnimationFrame(animate);
     };
 
@@ -168,7 +163,7 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, [dimensions]);
+  }, [particles, dimensions]);
 
   return (
     <div 
@@ -181,7 +176,7 @@ export const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         className="absolute inset-0"
         style={{ width: '100%', height: '100%' }}
       />
-      {particlesRef.current.map((particle) => {
+      {particles.map((particle) => {
         const IconComponent = particle.icon;
         return (
           <div
